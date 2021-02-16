@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Mix */
+.list-inline {
+  display: flex;
+  list-style: none;
+}
+
+/* Buttons */
+.btn {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+}
+.btn-grey {
+  background-color: #2b2c2e;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  height: 100vh
+}
+
+header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul li:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* Main */
+
+main {
+  height: calc(100% - 110px);
+  overflow: auto;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.person {
+  position: relative;
+  flex-basis: calc(20% - 10px);
+  margin: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.person__name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  border-radius: 2px
+}
+.person__name i {
+  color: red;
+  transform: rotateY(180deg);
+}
+
+.person img {
+  width: 100%;
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #222426;
+}
+
+@media screen and (max-width: 992px) {
+  .person {
+    flex-basis: calc(25% - 10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .person {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .people {
+    display: block;
+  }
+  #record-icon {
+    display: none
+  }
+}
